@@ -1,0 +1,94 @@
+.container{
+    background-color: #008cff;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.register{
+    background-color: white;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 2%;
+    width: 40vw;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.form-field{
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: end;
+}
+
+.form input,label{
+    /* height: 60px; */
+    /* position: absolute;
+    left: 0px;
+    bottom: 0px; */
+    font-size: 1.2rem;
+}
+
+.form-field label{
+    position: absolute;
+    /* bottom: 10px; */
+    /* top: -20; */
+    left: 0;
+    bottom: 0;
+    /* top: -25px; */
+    transition: .3s ease-in-out;
+}
+
+input:focus+label,
+input:valid+label{
+    /* color: red;
+    background-color: red; */
+    bottom: 25px;
+    pointer-events: none;
+    /* font-size: large; */
+    /* font-weight: bold; */
+    /* font-size: 1.3rem; */
+}
+
+
+.form-field input{
+    width: 100%;
+}
+
+:not(.form) input[type]:not([type="submit"]){
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: large;
+}
+
+input:focus {
+    outline: none;
+}
+
+.form input[type="submit"]{
+    background-color: #008cff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:700px) {
+    .register{
+        width: 90vw;
+    }
+}

@@ -7,8 +7,6 @@ import { ChatContext } from "../context/ChatContext";
 import "../Assets/Styles/home.css";
 
 function Home() {
-  // const [selectedUser,setSelectedUser] = useState(null);
-  // console.log(selectedUser);
   const { data } = useContext(ChatContext);
   const [showNavbar, setShowNavbar] = useState(false);
   console.log(data);
@@ -25,8 +23,6 @@ function Home() {
           <div></div>
           <div></div>
         </div>
-        {/* <Sidebar setSelectedUser={setSelectedUser} selectedUser={selectedUser}/> */}
-        {/* { !selectedUser? <h4 style={{display:"flex",alignItems:"center",justifyContent:"center",width:"100%"}}>Select the User</h4> : <Chat selectedUser={selectedUser} />} */}
         <Sidebar showNavbar={showNavbar} handleShowNavbar={handleShowNavbar} />
         {data.chatId == "" ? (
           <h4

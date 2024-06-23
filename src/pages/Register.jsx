@@ -25,7 +25,8 @@ const Register = () => {
     const password = e.target[2].value;
     // const file = e.target[3].files[0];
     const file = "";
-    const url = "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg";
+    const url =
+      "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg";
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -47,7 +48,6 @@ const Register = () => {
 
         setDoc(doc(db, "userchats", user.uid), {});
 
-
         console.log(user);
         setErr(false);
         navigate("/");
@@ -59,29 +59,6 @@ const Register = () => {
         console.log(error);
         setErr(true);
       });
-
-    // const storage = getStorage();
-    // const storageRef = ref(storage, "images");
-
-    // const uploadTask = uploadBytesResumable(storageRef, file);
-
-    // uploadTask.on(
-    //   (error) => {
-    //     // Handle unsuccessful uploads
-    //     console.log(error);
-    //   },
-    //   () => {
-    //     // Handle successful uploads on complete
-    //     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-    //     getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-    //       // console.log("File available at", downloadURL);
-    //       updateProfile(auth.currentUser, {
-    //         displayName: name, photoURL: "https://example.com/jane-q-user/profile.jpg"
-    //       })
-
-    //     });
-    //   }
-    // );
   }
 
   return (
@@ -90,15 +67,15 @@ const Register = () => {
         <h1>Register</h1>
         <form action="" onSubmit={handleSubmit} className="form">
           <div className="form-field">
-            <input type="text" name="name" id="name" required/>
+            <input type="text" name="name" id="name" required />
             <label for="name">Name</label>
           </div>
           <div className="form-field">
-            <input type="text" name="email" id="email" required/>
+            <input type="text" name="email" id="email" required />
             <label for="email">Email</label>
           </div>
           <div className="form-field">
-            <input type="password" name="password" id="password" required/>
+            <input type="password" name="password" id="password" required />
             <label for="password">Password</label>
           </div>
           <input type="submit" value="Register" />

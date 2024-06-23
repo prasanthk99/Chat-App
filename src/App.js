@@ -22,11 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <NavBar /> */}
-      {/* {!user ? <Welcome /> : <ChatBox />} */}
-      {/* <Home /> */}
-      {/* <Register/>
-      <Login /> */}
       <BrowserRouter>
         <Routes>
           <Route path="register" element={<Register />} />
